@@ -54,6 +54,7 @@ body {
 
 .heading-primary {
     color: #fff;
+    backface-visibility: hidden;
     text-transform: uppercase;
 }
 
@@ -62,6 +63,12 @@ body {
     font-size: 60px;
     font-weight: 600;
     letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; --after how long once the page loads does the animation start-- */
+    /* animation-iteration-count: 3; --how many times the animation repeats itself-- */
 }
 
 .heading-primary-sub {
@@ -69,4 +76,40 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    animation: moveInRight 5s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) /*rotate(360deg)*/;
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
 }
