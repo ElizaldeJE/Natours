@@ -45,6 +45,10 @@ body {
     height: 35px;
 }
 
+.logo:hover {
+    animation: moveInRight 1s ease-out;
+}
+
 .text-box {
     position: absolute;
     top: 40%;
@@ -77,7 +81,7 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
 
-    animation: moveInRight 5s ease-out;
+    animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
