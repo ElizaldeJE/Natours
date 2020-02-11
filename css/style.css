@@ -76,7 +76,18 @@ body {
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  -webkit-background-clip: text; }
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  transition: all .5s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
   border-radius: 10rem;
@@ -122,7 +133,6 @@ body {
   animation-fill-mode: backwards; }
 
 .row {
-  background-color: #eee;
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
@@ -132,7 +142,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: #ff4500;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
