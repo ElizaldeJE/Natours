@@ -69,6 +69,15 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  background-image: linear-gradient(to right, #55c57a, #28b485);
+  color: transparent;
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-background-clip: text; }
+
 .btn:link, .btn:visited {
   border-radius: 10rem;
   display: inline-block;
@@ -161,3 +170,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }

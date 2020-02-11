@@ -35,3 +35,13 @@ body {
         animation: moveInRight 1s ease-out;
     }
 }
+
+.heading-secondary {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color: transparent;
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+}
