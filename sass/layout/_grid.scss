@@ -1,5 +1,4 @@
 .row {
-    background-color: $color-grey-light;
     max-width: $grid-width;
     margin: 0 auto;
     
@@ -10,7 +9,6 @@
     @include clearfix;
 
     [class^="col-"] {  //This is an attribute, with the ^ simbol it selects all the classes that start with the desired selection, if you changed it to $ it would be all that end with that, or if you changed it to * it would be all the classes that contained that part.
-        background-color: $color-orangered;
         float: left;
         
         &:not(:last-child) {
