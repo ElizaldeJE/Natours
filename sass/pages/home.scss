@@ -16,6 +16,8 @@
 
     transform: skewY(-7deg);
 
+    margin-top: -11rem;
+
     & > * {  //section-features direct childs
         transform: skewY(7deg);
     }
