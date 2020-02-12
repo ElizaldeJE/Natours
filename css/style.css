@@ -203,7 +203,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
   .feature-box__icon {
     font-size: 6rem;
-    margin-bottom: .5rem; }
+    margin-bottom: .5rem;
+    background-image: linear-gradient(to right, #55c57a, #28b485);
+    color: transparent;
+    display: inline-block;
+    -webkit-background-clip: text; }
 
 .row {
   max-width: 114rem;

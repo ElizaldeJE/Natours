@@ -9,6 +9,11 @@
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
+
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        color: transparent;
+        display: inline-block;
+        -webkit-background-clip: text;
     }
 
     &__text {
