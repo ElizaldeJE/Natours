@@ -1,6 +1,6 @@
 .card {
+  //Functionality
   height: 50rem;
-
   perspective: 150rem;
   position: relative;
 
@@ -11,6 +11,7 @@
     font-size: 4rem;
     height: 50rem;
     transition: all .8s ease;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -36,5 +37,27 @@
 
   &:hover &__side--back {
     transform: rotateY(0deg);
+  }
+
+  //Front Side Styling
+  &__picture {
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 23rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
+    &--1{
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+      url(../img/nat-5.jpg); /*Moves up 1 level since once it is compiled it will be in the style.css file*/
+    }
+
+    &--2{
+      background-image: url(../img/nat-5.jpg); /*Moves up 1 level since once it is compiled it will be in the style.css file*/
+    }
+
+    &--3{
+      background-image: url(../img/nat-5.jpg); /*Moves up 1 level since once it is compiled it will be in the style.css file*/
+    }
   }
 }
