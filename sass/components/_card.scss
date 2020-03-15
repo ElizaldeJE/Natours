@@ -5,6 +5,8 @@
   position: relative;
 
   &__side{
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     color: white;
     font-size: 4rem;
     height: 50rem;
@@ -20,8 +22,11 @@
     }
 
     &--back {
-      background-color: green;
       transform: rotateY(180deg);
+
+      &-1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
     }
   }
 
