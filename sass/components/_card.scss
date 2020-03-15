@@ -7,7 +7,6 @@
   &__side{
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-    color: white;
     font-size: 4rem;
     height: 50rem;
     transition: all .8s ease;
@@ -58,6 +57,27 @@
 
     &--3{
       background-image: url(../img/nat-5.jpg); /*Moves up 1 level since once it is compiled it will be in the style.css file*/
+    }
+  }
+
+  &__heading {
+    color: $color-white;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    -webkit-box-decoration-break: clone;
+    padding: 1rem 1.5rem;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
     }
   }
 }
