@@ -5,11 +5,10 @@
   position: relative;
 
   &__side{
-    background-color: orangered;
     color: white;
     font-size: 4rem;
     height: 50rem;
-    transition: all .8s;
+    transition: all .8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -17,7 +16,7 @@
     backface-visibility: hidden;
 
     &--front {
-      background-color: orangered;
+      background-color: $color-white;
     }
 
     &--back {
