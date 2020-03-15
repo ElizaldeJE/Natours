@@ -96,6 +96,12 @@ body {
 .u-center-text {
   text-align: center; }
 
+.u-margin-top-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem; }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
@@ -104,6 +110,20 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .15;
+  z-index: -1;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .btn:link, .btn:visited {
   border-radius: 10rem;
@@ -130,6 +150,12 @@ body {
   background-color: #fff;
   color: #777; }
   .btn--white::after {
+    background-color: #fff; }
+
+.btn--green {
+  background-color: #7ed56f;
+  color: #fff; }
+  .btn--green::after {
     background-color: #fff; }
 
 .btn:after {
@@ -168,29 +194,99 @@ body {
   transform: translateY(0); }
 
 .card {
-  height: 50rem;
+  height: 52rem;
   perspective: 150rem;
   position: relative; }
   .card__side {
-    background-color: orangered;
-    color: white;
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     font-size: 4rem;
-    height: 50rem;
-    transition: all .8s;
+    height: 52rem;
+    transition: all .8s ease;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden; }
     .card__side--front {
-      background-color: orangered; }
+      background-color: #fff; }
     .card__side--back {
-      background-color: green;
       transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #55c57a, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5642fa); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 23rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+      /*Moves up 1 level since once it is compiled it will be in the style.css file*/ }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #55c57a, #28b485), url(../img/nat-6.jpg);
+      /*Moves up 1 level since once it is compiled it will be in the style.css file*/ }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5642fa), url(../img/nat-7.jpg);
+      /*Moves up 1 level since once it is compiled it will be in the style.css file*/ }
+  .card__heading {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    -webkit-box-decoration-break: clone;
+    padding: 1rem 1.5rem; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 66, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      margin: 0 auto;
+      width: 80%; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 0.1rem solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 90%; }
+  .card__price-box {
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -237,6 +333,50 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.story {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  border-radius: .3rem;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  width: 75%;
+  padding: 6rem;
+  padding-left: 9rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    position: relative;
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .story__img {
+    backface-visibility: hidden;
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    color: #fff;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -267,6 +407,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   height: 95vh;
   position: relative; }
@@ -302,4 +443,8 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   margin-top: -11rem;
-  padding: 25rem 0 50rem 0; }
+  padding: 25rem 0 15rem 0; }
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative; }
